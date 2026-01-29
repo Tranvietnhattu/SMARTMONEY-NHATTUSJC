@@ -1,0 +1,5 @@
+{
+  "name": "MoneyMind - Quản Lý Chi Tiêu",
+  "description": "Một ứng dụng quản lý tài chính cá nhân toàn diện với giao diện mobile-first, hỗ trợ theo dõi thu chi, lịch giao dịch và trợ lý phân tích tài chính.",
+  "requestFramePermissions": []
+}

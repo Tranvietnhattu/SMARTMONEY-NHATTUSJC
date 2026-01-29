@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Smart Money - NHATTU SJC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --motion-ease: cubic-bezier(0.33, 1, 0.68, 1);
+            --motion-duration: 250ms;
+        }
+        * {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-x: hidden;
+            overscroll-behavior-y: none;
+        }
+        input, select, textarea {
+            font-size: 16px !important; 
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .tab-pill-active {
+            transition: transform var(--motion-duration) var(--motion-ease), width var(--motion-duration) var(--motion-ease);
+            will-change: transform, width;
+        }
+        
+        .premium-content-fade {
+            animation: premiumEnter var(--motion-duration) var(--motion-ease) forwards;
+        }
+        
+        @keyframes premiumEnter {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .active-pill-shadow {
+            box-shadow: 0 4px 12px -2px rgba(79, 70, 229, 0.12);
+        }
+
+        .glass-tab {
+            background: rgba(241, 245, 249, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "date-fns": "https://esm.sh/date-fns@^4.1.0",
+    "date-fns/": "https://esm.sh/date-fns@^4.1.0/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-slate-900 selection:bg-indigo-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
